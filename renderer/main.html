@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Tool v1</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/be456cd919.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Configuration Tool</h1>
+        </header>
+        <br id="lineBreak" />
+        <div id="svg-container">
+            <div class="buttons" id="valve-buttons">
+                <button id="rotateButton"><i class="fa fa-undo fa-2x fa-flip-horizontal"></i>
+                </button>
+                <button id="clearButton">clear</button>
+            </div>
+            <div id="svg-valve" class="test" width="45%">
+                <h1 id="numField">0</h1>
+                <svg class="svg-view" viewbox="-30 -5 160 160" preserveAspectRatio="xMinYMin meet"
+                    xmlns="http://www.w3.org/2000/svg" width="35vw">
+                    <g id="valve" translate="" transform="">
+                        <rect width="100" height="150" fill="none" stroke="black" />
+                        <circle id="11" class="port" stroke-width="4px" r="15" cx="50" cy="75" fill="none"
+                            stroke="#d3d3d3" />
+                        <line id="1" class="port" x1="50" x2="50" y1="5" y2="45" stroke-width="5px" stroke="#d3d3d3" />
+                        <line id="2" class="port" x1="50" x2="50" y1="55" y2="95" stroke-width="5px" stroke="#d3d3d3" />
+                        <line id="3" class="port" x1="50" x2="50" y1="105" y2="145" stroke-width="5px"
+                            stroke="#d3d3d3" />
+                        <line id="4" class="port" x1="5" x2="43" y1="50" y2="50" stroke-width="5px" stroke="#d3d3d3" />
+                        <line id="5" class="port" x1="5" x2="43" y1="100" y2="100" stroke-width="5px"
+                            stroke="#d3d3d3" />
+                        <line id="6" class="port" x1="57" x2="95" y1="50" y2="50" stroke-width="5px" stroke="#d3d3d3" />
+                        <line id="7" class="port" x1="57" x2="95" y1="100" y2="100" stroke-width="5px"
+                            stroke="#d3d3d3" />
+                        <line id="8" class="port" x1="5" x2="43" y1="75" y2="75" stroke-width="5px" stroke="#d3d3d3" />
+                        <line id="9" class="port" x1="57" x2="95" y1="75" y2="75" stroke-width="5px" stroke="#d3d3d3" />
+                    </g>
+                </svg>
+            </div>
+            <div id="svg-pump" class="test" width="45%">
+                <h1 id="numField">0</h1>
+                <svg class="svg-view" viewbox="-30 -5 160 160" preserveAspectRatio="xMinYMin meet"
+                    xmlns="http://www.w3.org/2000/svg" width="35vw">
+                    <g id="valve" translate="" transform="">
+                        <rect width="100" height="150" fill="none" stroke="black" />
+                        <circle id="11" class="port" stroke-width="3px" r="50" cx="50" cy="75" fill="none"
+                            stroke="black" />
+                        <line id="5" class="port" x1="5" x2="43" y1="100" y2="100" stroke-width="5px"
+                            stroke="#d3d3d3" />
+                        <line id="7" class="port" x1="57" x2="95" y1="100" y2="100" stroke-width="5px"
+                            stroke="#d3d3d3" />
+
+                    </g>
+                </svg>
+            </div>
+            <div class="buttons" id="pump-buttons">
+                <select name="pumps" id="pumps">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab" selected>Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <button id="topButton">Direction</button>
+                <button id="middleButton">Type</button>
+                <button id="bottomButton">Base</button>
+            </div>
+        </div>
+    </div>
+    <script src='app.js'></script>
+</body>
+
+</html>

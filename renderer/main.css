@@ -1,0 +1,67 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0 10;
+    font: caption;
+    background-color: #f1f1f1;
+}
+
+.container {
+    height: 90vh;
+    width: 80vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#svg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    background: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: blue;
+}
+
+.port:hover {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+select {
+    margin: 0 0 10px 0;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #dedede
+}
+#rotateButton{
+    margin-bottom: 10px;
+}
+#pump-buttons{
+    margin: 0 0;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+header{
+    padding-bottom: 5px;
+    border-bottom: 2px solid blue;
+}

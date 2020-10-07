@@ -1,12 +1,19 @@
 const ports = document.getElementsByClassName('port');
 const numField1 = document.getElementById('num-field-one');
+const valveSelect = document.getElementById('valves');
 const rotateButton = document.getElementById('rotate-button');
+const vTypeButton = document.getElementById('v-type-button');
 const clearButton = document.getElementById('clear-button');
-const valve = document.getElementById('valve');
+const valve = document.getElementById('Valve1');
+
+const valveTypesArr = ['Valve1', 'Valve2'];
 
 let valveValue = +numField1.innerText;
 
-let flipped = false;
+let rotated = false;
+let valveTypesPtr = 0;
+
+initializeValve();
 
 const subtractValveValue = element => {
 	valveValue -= +element.attributes['id'].value;
@@ -18,11 +25,25 @@ const addValveValue = element => {
 	numField1.innerText = valveValue.toString();
 };
 
-function flipValve() {
-	flipped = !flipped;
-	flipped
+function rotateValve() {
+	rotated = !rotated;
+	rotated
 		? valve.setAttribute('transform', 'rotate(90) translate(25 -125)')
 		: valve.setAttribute('transform', 'rotate(0) translate(0 0)');
+}
+
+function changeValveSelect() {
+	clearValve();
+
+	switch(valveTypesArr[valveTypesPtr]){
+
+	}
+
+	let selection = valveSelect.value;
+	let newValve = document.getElementById(`${selection}`);
+	newValve.style['display'] = 'block';
+	valveTypesPtr = valveSelect.selectedIndex;
+	amount = newValve.getAttribute('key');
 }
 
 function clearValve() {
@@ -44,5 +65,18 @@ for (port of ports) {
 	port.addEventListener('click', toggleColor);
 }
 
-rotateButton.addEventListener('click', flipValve);
-clearButton.addEventListener('click', clearValve);
+function initializeValve() {
+	clearValve();
+
+	for (let valve of valveTypesArr) {
+		let newEl = document.createElement('option');
+		newEl.innerText = valve;
+		newEl.setAttribute('value', valve);
+		valveSelect.appendChild(newEl);
+	}
+
+	valveSelect.addEventListener('change', changeValveSelect)
+	rotateButton.addEventListener('click', rotateValve);
+	vTypeButton.addEventListener('click', changeValveType);
+	clearButton.addEventListener('click', clearValve);
+}

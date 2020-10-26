@@ -1,17 +1,12 @@
 const ports = document.getElementsByClassName('port');
 const numField1 = document.getElementById('num-field-one');
-const valveSelect = document.getElementById('valves');
 const rotateButton = document.getElementById('rotate-button');
-const vTypeButton = document.getElementById('v-type-button');
 const clearButton = document.getElementById('clear-button');
 const valve = document.getElementById('Valve1');
-
-const valveTypesArr = ['Valve1', 'Valve2'];
 
 let valveValue = +numField1.innerText;
 
 let rotated = false;
-let valveTypesPtr = 0;
 
 initializeValve();
 
@@ -34,10 +29,6 @@ function rotateValve() {
 
 function changeValveSelect() {
 	clearValve();
-
-	switch(valveTypesArr[valveTypesPtr]){
-
-	}
 
 	let selection = valveSelect.value;
 	let newValve = document.getElementById(`${selection}`);
@@ -68,15 +59,6 @@ for (port of ports) {
 function initializeValve() {
 	clearValve();
 
-	for (let valve of valveTypesArr) {
-		let newEl = document.createElement('option');
-		newEl.innerText = valve;
-		newEl.setAttribute('value', valve);
-		valveSelect.appendChild(newEl);
-	}
-
-	valveSelect.addEventListener('change', changeValveSelect)
 	rotateButton.addEventListener('click', rotateValve);
-	vTypeButton.addEventListener('click', changeValveType);
 	clearButton.addEventListener('click', clearValve);
 }

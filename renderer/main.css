@@ -1,70 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 * {
-	margin: auto;
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
 }
 
 body {
-	margin: 0 10;
-	font: caption;
-	background-color: white;
-	user-select: none;
+  margin: 0;
+  font: caption;
+  background-color: white;
+  user-select: none;
 }
 
 .container {
-	height: 90vh;
-	width: 80vw;
-	justify-content: center;
-	text-align: center;
+  /* height: 90vh; */
+  width: 80vw;
+  justify-content: center;
+  text-align: center;
 }
 
 #svg-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
 }
 
 button {
-	background: dodgerblue;
-	color: white;
-	border-radius: 5px;
-	border: none;
-	font-size: 24px;
-	outline: none;
-	cursor: pointer;
-	padding: 10px;
+  background: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
 button:hover {
-	background: blue;
+  background: blue;
 }
 
 .port:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .buttons {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 select {
-	margin: 0 0 10px 0;
-	padding: 10px 20px 10px 10px;
-	font-size: 16px;
-	border: 1px solid #dedede;
+  margin: 0 0 10px 0;
+  padding: 10px 20px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #dedede;
 }
 
 #valve-buttons,
 #pump-buttons {
-	margin: 0 0;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: space-between;
+  margin: 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 header {
-	padding-bottom: 5px;
-	border-bottom: 2px solid blue;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0, 37, 204);
+  padding-bottom: 5px;
+  color: #dedede;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#num-field-one,
+#num-field-two {
+  font-size: 40px;
 }

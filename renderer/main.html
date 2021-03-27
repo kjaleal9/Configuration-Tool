@@ -8,24 +8,24 @@
   </head>
 
   <body>
-      <header>
-        <h1>Configuration Tool</h1>
-      </header>
+    <header>
+      <h1>Configuration Tool</h1>
+    </header>
     <div class="container">
       <br id="line-break" />
       <div id="svg-container">
         <div id="valve-buttons" class="buttons">
           <button id="rotate-button">Rotate</button>
           <button id="clear-button">Clear</button>
+          <button id="switch-to-pump">Pump</button>
         </div>
-        <div id="svg-valve" width="45%">
+        <div id="svg-valve">
           <h1 id="num-field-one">0</h1>
           <svg
             class="svg-view"
             viewbox="-30 -5 160 160"
             preserveAspectRatio="xMinYMin meet"
             xmlns="http://www.w3.org/2000/svg"
-            width="35vw"
           >
             <g id="Valve1">
               <rect
@@ -138,14 +138,13 @@
             </g>
           </svg>
         </div>
-        <div id="svg-pump" class="test" width="45%">
+        <div id="svg-pump">
           <h1 id="num-field-two">0</h1>
           <svg
             class="svg-view"
             viewbox="-30 -5 160 160"
             preserveAspectRatio="xMinYMin meet"
             xmlns="http://www.w3.org/2000/svg"
-            width="35vw"
           >
             <g id="pump" translate="" transform="">
               <circle
@@ -178,7 +177,7 @@
             </g>
             <g id="pump-types">
               <g id="Pump1" key="8">
-                <text x="23px" y="100px" font-size="500%">M</text>
+                <text x="17px" y="100px" font-size="500%">M</text>
               </g>
               <g id="Pump2" key="16">
                 <path
@@ -260,16 +259,18 @@
             </g>
           </svg>
         </div>
-        <div class="buttons" id="pump-buttons">
+        <div id="pump-buttons" class="buttons">
           <select name="pumps" id="pumps"></select>
           <button id="direction-button">Direction</button>
           <button id="type-button">Type</button>
           <button id="base-button">Base</button>
           <button id="pump-clear-button">Clear</button>
+          <button id="switch-to-valve">Valve</button>
         </div>
       </div>
     </div>
     <script src="./valveScript.js"></script>
     <script src="./pumpScript.js"></script>
+    <script src="./utilitiesScript.js"></script>
   </body>
 </html>

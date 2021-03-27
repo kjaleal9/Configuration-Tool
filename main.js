@@ -10,7 +10,7 @@ let mainWindow
 function createWindow() {
   // Win state keeper
   let state = windowStateKeeper({
-    defaultWidth: 680,
+    defaultWidth: 720,
     defaultHeight: 450,
   })
 
@@ -19,7 +19,7 @@ function createWindow() {
     y: state.y,
     width: state.width,
     height: state.height,
-    minWidth: 680,
+    minWidth: 280,
     minHeight: 450,
     webPreferences: { nodeIntegration: true },
   })
@@ -31,7 +31,7 @@ function createWindow() {
   state.manage(mainWindow)
 
   // Open DevTools - Remove for PRODUCTION!
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools()
 
   // Listen for window being closed
   mainWindow.on('closed', () => {

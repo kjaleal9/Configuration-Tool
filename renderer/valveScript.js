@@ -5,10 +5,8 @@ const clearButton = document.getElementById('clear-button')
 const valve = document.getElementById('Valve1')
 
 let valveValue = +numField1.innerText
-
 let rotated = false
-
-initializeValve()
+clearValve()
 
 const subtractValveValue = (element) => {
   valveValue -= +element.attributes['id'].value
@@ -48,7 +46,7 @@ function clearValve() {
 function toggleColor(e) {
   const element = e.target
   element.attributes['stroke'].value === '#d3d3d3'
-    ? ((element.attributes['stroke'].value = 'black'), addValveValue(element))
+    ? ((element.attributes['stroke'].value = '#000'), addValveValue(element))
     : ((element.attributes['stroke'].value = '#d3d3d3'),
       subtractValveValue(element))
 }
@@ -57,9 +55,5 @@ for (port of ports) {
   port.addEventListener('click', toggleColor)
 }
 
-function initializeValve() {
-  clearValve()
-
-  rotateButton.addEventListener('click', rotateValve)
-  clearButton.addEventListener('click', clearValve)
-}
+rotateButton.addEventListener('click', rotateValve)
+clearButton.addEventListener('click', clearValve)

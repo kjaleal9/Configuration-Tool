@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-  /* height: 90vh; */
-  width: 80vw;
+  height: 90vh;
+  width: 90vw;
   justify-content: center;
   text-align: center;
 }
@@ -25,6 +25,11 @@ body {
   flex-direction: row;
   justify-content: space-around;
   background-color: white;
+}
+
+#svg-pump,
+#svg-valve {
+  width: 45%;
 }
 
 button {
@@ -58,8 +63,8 @@ select {
   border: 1px solid #dedede;
 }
 
-#valve-buttons,
-#pump-buttons {
+#pump-buttons,
+#valve-buttons {
   margin: 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -80,3 +85,34 @@ header {
 #num-field-two {
   font-size: 40px;
 }
+.svg-view {
+  width: auto;
+}
+
+/* .svg-mobile {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.svg-mobile-none {
+  display: none;
+} */
+
+/* @media (max-width: 600px) {
+  * {
+    overflow-x: hidden;
+    min-width: 400px;
+  }
+  body {
+    height: 100vh;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+
+  .svg-container-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+} */

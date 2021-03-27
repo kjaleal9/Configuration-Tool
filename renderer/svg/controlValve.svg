@@ -1,0 +1,49 @@
+
+ 
+
+          <svg
+            class="svg-view"
+            viewbox="-30 -5 160 160"
+            preserveAspectRatio="xMinYMin meet"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Valve1">
+              <rect
+                width="40"
+                height="80"
+                fill="none"
+                stroke="black"
+                stroke-width="3px"
+                x="30"
+                y="35"
+              />
+              <circle
+                id="512"
+                class="port"
+                stroke-width="5px"
+                r="15"
+                cx="50"
+                cy="75"
+                fill="none"
+                stroke="#d3d3d3"
+              />
+              <path
+                d="M 30 22 A 10 13 0 0 1 70 22 L 29 22"
+                stroke-width="2px"
+                stroke="black"
+                fill="transparent"
+              />
+
+              <line
+                id="256"
+                class="port"
+                x1="50"
+                x2="50"
+                y1="15"
+                y2="135"
+                stroke-width="6px"
+                stroke="#d3d3d3"
+              />
+            </g>
+          </svg>
+    

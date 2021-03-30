@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
-  margin: auto;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Muli', sans-serif;
 }
 
 body {
-  margin: 0;
   font: caption;
   background-color: white;
   user-select: none;
 }
 
 .container {
+  margin: auto;
   height: 90vh;
   width: 90vw;
   justify-content: center;
@@ -23,13 +23,24 @@ body {
 #svg-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+}
+
+.svg-container__left {
+  display: flex;
+  flex-direction: row;
   background-color: white;
+  width: 100%;
+}
+.svg-container__right {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  width: 100%;
 }
 
 #svg-pump,
 #svg-valve {
-  width: 45%;
+  width: 80%;
 }
 
 button {
@@ -51,11 +62,6 @@ button:hover {
   cursor: pointer;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-}
-
 select {
   margin: 0 0 10px 0;
   padding: 10px 20px 10px 10px;
@@ -65,10 +71,9 @@ select {
 
 #pump-buttons,
 #valve-buttons {
-  margin: 0 0;
   display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 header {

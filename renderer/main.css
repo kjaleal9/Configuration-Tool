@@ -14,10 +14,13 @@ body {
 
 .container {
   margin: auto;
-  height: 90vh;
   width: 90vw;
   justify-content: center;
   text-align: center;
+}
+
+.active{
+  
 }
 
 #svg-container {
@@ -56,6 +59,13 @@ button {
 
 button:hover {
   background: blue;
+  transform: translatey(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translatey(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .port:hover {
@@ -92,6 +102,12 @@ header {
 }
 .svg-view {
   width: auto;
+}
+
+.pump {
+  stroke: black;
+  stroke-width: 4px;
+  fill: transparent;
 }
 
 /* .svg-mobile {

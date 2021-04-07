@@ -1,5 +1,5 @@
 // Modules
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow } = require('electron');
 const windowStateKeeper = require('electron-window-state');
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -22,6 +22,7 @@ function createWindow() {
     minWidth: 650,
     minHeight: 450,
     webPreferences: { nodeIntegration: true },
+    icon: __dirname + '/build/TetraPak-Logo.ico',
   });
 
   // Load index.html into the new BrowserWindow

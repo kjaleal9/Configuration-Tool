@@ -8,42 +8,54 @@
 
 body {
   font: caption;
-  background-color: white;
+  background-color: rgba(81, 185, 230, 0.5);
   user-select: none;
 }
 
 .container {
   margin: auto;
-  width: 90vw;
-  justify-content: center;
+  margin-top: 3rem;
+  height: 100%;
+  width: 95vw;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  background-image: url('../TetraPak-Logo.svg');
+  background-size: 55%;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
-.active{
-  
-}
-
-#svg-container {
+.svg-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 1rem 3rem 3rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .svg-container__left {
   display: flex;
   flex-direction: row;
-  background-color: white;
   width: 100%;
 }
+
 .svg-container__right {
   display: flex;
   flex-direction: row-reverse;
-  background-color: white;
   width: 100%;
 }
 
 #svg-pump,
 #svg-valve {
   width: 80%;
+}
+
+.num-field {
+  border: 2px solid blue;
+  border-radius: 10px;
 }
 
 button {
@@ -58,9 +70,8 @@ button {
 }
 
 button:hover {
-  background: blue;
+  background: rgba(16, 16, 233);
   transform: translatey(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 button:active {
@@ -70,13 +81,6 @@ button:active {
 
 .port:hover {
   cursor: pointer;
-}
-
-select {
-  margin: 0 0 10px 0;
-  padding: 10px 20px 10px 10px;
-  font-size: 16px;
-  border: 1px solid #dedede;
 }
 
 #pump-buttons,
@@ -89,9 +93,8 @@ select {
 header {
   width: 100%;
   text-align: center;
-  background-color: rgb(0, 37, 204);
   padding-bottom: 5px;
-  color: #dedede;
+  color: #0000ff;
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -109,31 +112,3 @@ header {
   stroke-width: 4px;
   fill: transparent;
 }
-
-/* .svg-mobile {
-  width: 90%;
-  margin-bottom: 20px;
-}
-
-.svg-mobile-none {
-  display: none;
-} */
-
-/* @media (max-width: 600px) {
-  * {
-    overflow-x: hidden;
-    min-width: 400px;
-  }
-  body {
-    height: 100vh;
-  }
-
-  button {
-    margin-bottom: 10px;
-  }
-
-  .svg-container-mobile {
-    display: flex;
-    flex-direction: column;
-  }
-} */

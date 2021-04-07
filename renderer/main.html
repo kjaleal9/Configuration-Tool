@@ -4,31 +4,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Configuration Tool v1</title>
+  <title>Configuration Tool</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Configuration Tool</h1>
-  </header>
   <div class="container">
-    <br id="line-break" />
-    <div id="svg-container">
+    <div class="svg-container">
       <div class="svg-container__left">
         <div id="valve-buttons" class="svg-buttons">
-          <button id="rotate-button">Rotate</button>
+          <button id="rotate-button" >Rotate</button>
           <button id="clear-button">Clear</button>
-          <!-- <button id="switch-to-pump">Pump</button> -->
         </div>
         <div id="svg-valve">
           <h1 id="num-field-one">0</h1>
           <svg class="svg-view" viewbox="-30 -5 160 160" preserveAspectRatio="xMinYMin meet"
             xmlns="http://www.w3.org/2000/svg">
-            <g id="Valve1">
+            <g id="valve-1">
               <rect width="100" height="150" fill="none" stroke="black" stroke-width="3px" />
               <circle id="512" class="port" stroke-width="5px" r="15" cx="50" cy="75" fill="none" stroke="#d3d3d3" />
-              <line id="1" class="port active" x1="50" x2="50" y1="5" y2="45" stroke-width="7px" stroke="#d3d3d3" />
+              <line id="1" class="port " x1="50" x2="50" y1="5" y2="45" stroke-width="7px" stroke="#d3d3d3" />
               <line id="2" class="port" x1="57" x2="95" y1="50" y2="50" stroke-width="7px" stroke="#d3d3d3" />
               <line id="4" class="port" x1="57" x2="95" y1="75" y2="75" stroke-width="7px" stroke="#d3d3d3" />
               <line id="8" class="port" x1="57" x2="95" y1="100" y2="100" stroke-width="7px" stroke="#d3d3d3" />
@@ -48,10 +43,9 @@
           <button id="type-button">Type</button>
           <button id="base-button">Base</button>
           <button id="pump-clear-button">Clear</button>
-          <!-- <button id="switch-to-valve">Valve</button> -->
         </div>
         <div id="svg-pump">
-          <h1 id="num-field-two">0</h1>
+          <h1 id="num-field-two" class="numfield">0</h1>
           <svg class="svg-view" viewbox="-30 -5 160 160" preserveAspectRatio="xMinYMin meet"
             xmlns="http://www.w3.org/2000/svg">
             <g id="pump" translate="" transform="">

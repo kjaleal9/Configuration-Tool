@@ -48,14 +48,3 @@ clearButton.addEventListener('click', clearValve);
 for (port of ports) {
   port.addEventListener('click', toggleColor);
 }
-
-// function changeValveSelect() {
-//   clearValve();
-
-//   let selection = valveSelect.value;
-//   let newValve = document.getElementById(`${selection}`);
-//   newValve.style['display'] = 'block';
-//   valveTypesPtr = valveSelect.selectedIndex;
-//   amount = newValve.getAttribute('key');
-// }
-

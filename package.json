@@ -1,12 +1,14 @@
 {
 	"name": "configuration-tool",
+  "productName": "Configuration Tool",
 	"version": "1.0.0",
-	"description": "",
+	"description": "configure animation values",
 	"main": "main.js",
 	"scripts": {
 		"start": "electron .",
 		"watch": "nodemon --exec electron .",
-		"reset": "git reset --hard"
+		"reset": "git reset --hard",
+    "package-win": "electron-packager . configuration-tool --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/TetraPak-Logo.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Configuration Tool\""  
 	},
 	"author": "",
 	"license": "ISC",
@@ -15,6 +17,7 @@
 		"nodemon": "^1.18.9"
 	},
 	"dependencies": {
+		"electron-packager": "^15.4.0",
 		"electron-window-state": "^5.0.3"
 	}
 }

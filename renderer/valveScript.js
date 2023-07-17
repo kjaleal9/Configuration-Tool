@@ -2,7 +2,7 @@ const ports = document.getElementsByClassName('port');
 const numField1 = document.getElementById('num-field-one');
 const rotateButton = document.getElementById('rotate-button');
 const clearButton = document.getElementById('clear-button');
-const valve = document.getElementById('Valve1');
+const valve = document.getElementById('valve-1');
 
 let valveValue = +numField1.innerText;
 let rotated = false;
